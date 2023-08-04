@@ -3,14 +3,79 @@ const answersContainer = document.querySelector(".answers");
 const resultElement = document.getElementById("result");
 const questions = [
     {
-      question: "Cine a fost primul împărat al Romei?",
-      options: ["Augustus", "Julius Caesar", "Nero", "Caligula"],
+      question: "Cine a fost primul președinte al Statelor Unite ale Americii?",
+      options: ["George Washington", "Thomas Jefferson", "Benjamin Franklin", "John Adams"],
       correctIndex: 0
     },
     {
-      question: "Care a fost numele dinastiei conduse de regina Cleopatra?",
-      options: ["Ptolemeii", "Borgia", "Hanover", "Medici"],
-      correctIndex: 0
+      question: "În ce an a avut loc Revoluția Industrială?",
+      options: ["1756", "1804", "1872", "1769"],
+      correctIndex: 2
+    },
+    {
+      question: "Cine a scris lucrarea \"Originea speciilor prin selecție naturală\"?",
+      options: ["Isaac Newton", "Galileo Galilei", "Charles Darwin", "Albert Einstein"],
+      correctIndex: 2
+    },
+    {
+      question: "Care a fost perioada cunoscută sub numele de \"Războaiele Napoleonice\"?",
+      options: ["Secolul al XVII-lea", "Secolul al XIX-lea", "Secolul al XVIII-lea", "Secolul al XX-lea"],
+      correctIndex: 1
+    },
+    {
+      question: "Ce eveniment a marcat căderea Zidului Berlinului în 1989?",
+      options: ["Primul Război Mondial", "Revoluția Americană", "Al Doilea Război Mondial", "Războiul Rece"],
+      correctIndex: 3
+    },
+    {
+      question: "Când a avut loc Războiul de Independență al României?",
+      options: ["1866", "1812", "1877", "1918"],
+      correctIndex: 2
+    },
+    {
+      question: "Cine a fost liderul Mișcării pentru Drepturile Civile din SUA?",
+      options: ["Malcolm X", "Jesse Jackson", "Martin Luther King Jr.", "Barack Obama"],
+      correctIndex: 2
+    },
+    {
+      question: "Unde a avut loc Revoluția Franceză?",
+      options: ["Londra", "Berlin", "Roma", "Paris"],
+      correctIndex: 3
+    },
+    {
+      question: "Când a avut loc Revoluția Industrială?",
+      options: ["1756", "1804", "1872", "1769"],
+      correctIndex: 2
+    },
+    {
+      question: "Cine a scris lucrarea \"Originea speciilor prin selecție naturală\"?",
+      options: ["Isaac Newton", "Galileo Galilei", "Charles Darwin", "Albert Einstein"],
+      correctIndex: 2
+    },
+    {
+      question: "Cine a scris tragedia greacă 'Oedip rege'?",
+      options: ["Euripides", "Aristofan", "Sofocle", "Herodot"],
+      correctIndex: 2
+    },
+    {
+      question: "Câte planete fac parte din sistemul solar?",
+      options: ["6", "7", "8", "9"],
+      correctIndex: 2
+    },
+    {
+      question: "Ce reprezintă simbolul chimic 'Fe' în tabelul periodic?",
+      options: ["Hidrogen", "Fier", "Oxigen", "Azot"],
+      correctIndex: 1
+    },
+    {
+      question: "Cine a fost sculptorul celebru autor al statuii 'David'?",
+      options: ["Leonardo da Vinci", "Raffaello", "Michelangelo", "Donatello"],
+      correctIndex: 2
+    },
+    {
+      question: "Care este capitala Spaniei?",
+      options: ["Barcelona", "Sevilla", "Valencia", "Madrid"],
+      correctIndex: 3
     },
     {
       question: "În ce an a avut loc Marea Schismă a Bisericii?",
@@ -18,39 +83,49 @@ const questions = [
       correctIndex: 0
     },
     {
-      question: "Cine a fost Leonardo da Vinci?",
-      options: ["Un pictor italian", "Un matematician grec", "Un filosof german", "Un arhitect spaniol"],
+      question: "Cine a fost împăratul Romanului de Apus în timpul căderii Romei?",
+      options: ["Julius Caesar", "Augustus", "Nero", "Romulus Augustulus"],
+      correctIndex: 3
+    },
+    {
+      question: "Care a fost primul om care a călcat pe Lună?",
+      options: ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "John Glenn"],
+      correctIndex: 2
+    },
+    {
+      question: "Cine a scris piesa de teatru 'Romeo și Julieta'?",
+      options: ["William Shakespeare", "Friedrich Nietzsche", "Leo Tolstoy", "Jane Austen"],
       correctIndex: 0
     },
     {
-      question: "Când a avut loc Revoluția Franceză?",
+      question: "Cine a scris romanul 'Mândrie și prejudecată'?",
+      options: ["George Eliot", "Emily Brontë", "Jane Austen", "Charlotte Brontë"],
+      correctIndex: 2
+    },
+    {
+      question: "Ce explorator a condus prima expediție care a circumnavigat globul?",
+      options: ["Christopher Columbus", "Ferdinand Magellan", "Vasco da Gama", "Amerigo Vespucci"],
+      correctIndex: 1
+    },
+    {
+      question: "În ce an a avut loc Revoluția Franceză?",
       options: ["1789", "1812", "1830", "1848"],
       correctIndex: 0
     },
     {
-      question: "Care bătălie a marcat sfârșitul războiului din Vietnam?",
-      options: ["Bătălia de la Hanoi", "Bătălia de la Saigon", "Bătălia de la Dien Bien Phu", "Bătălia de la Hue"],
-      correctIndex: 2
-    },
-    {
-      question: "Ce conducător celebru a condus expansiunea Imperiului Mongol?",
-      options: ["Genghis Khan", "Attila", "Napoleon", "Alexander cel Mare"],
+      question: "Cine a scris 'Crima din Orient Express'?",
+      options: ["Agatha Christie", "Arthur Conan Doyle", "Raymond Chandler", "Dorothy L. Sayers"],
       correctIndex: 0
     },
     {
-      question: "Cine a scris piesa de teatru \"Hamlet\"?",
-      options: ["William Shakespeare", "Christopher Marlowe", "Molière", "Oscar Wilde"],
+      question: "Ce compozitor a creat celebra 'Simfonie a IX-a'?",
+      options: ["Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach", "Franz Schubert"],
       correctIndex: 0
     },
     {
-      question: "Care a fost primul președinte al Statelor Unite ale Americii?",
-      options: ["George Washington", "Thomas Jefferson", "Benjamin Franklin", "John Adams"],
+      question: "Cine a scris drama 'Hamlet'?",
+      options: ["William Shakespeare", "George Bernard Shaw", "Anton Chekhov", "Henrik Ibsen"],
       correctIndex: 0
-    },
-    {
-      question: "În ce an a avut loc Războiul de Independență al României?",
-      options: ["1859", "1877", "1918", "1947"],
-      correctIndex: 1
     },
     {
       question: "Care este cel mai lung fluviu din lume?",
@@ -58,7 +133,7 @@ const questions = [
       correctIndex: 1
     },
     {
-      question: "Care oraș este considerat \"Veneția Nordului\"?",
+      question: "Care oraș este considerat 'Veneția Nordului'?",
       options: ["Amsterdam", "Bruges", "Copenhaga", "Stockholm"],
       correctIndex: 0
     },
@@ -88,7 +163,7 @@ const questions = [
       correctIndex: 0
     },
     {
-      question: "Ce țară este cunoscută ca \"Țara Soarelui-Răsare\"?",
+      question: "Ce țară este cunoscută ca 'Țara Soarelui-Răsare'?",
       options: ["China", "Japonia", "India", "Thailanda"],
       correctIndex: 1
     },
@@ -113,7 +188,7 @@ const questions = [
       correctIndex: 0
     },
     {
-      question: "Ce înseamnă acronimul \"URL\" în contextul web?",
+      question: "Ce înseamnă acronimul 'URL' în contextul web?",
       options: ["Uniform Resource Locator", "Universal Responsive Layout", "User Registration Link", "Ultimate Resource Library"],
       correctIndex: 0
     },
@@ -128,12 +203,12 @@ const questions = [
       correctIndex: 3
     },
     {
-      question: "Ce este \"cloud computing\"?",
+      question: "Ce este 'cloud computing'?",
       options: ["Procesul de modelare a fenomenelor meteorologice", "Stocarea și accesarea datelor prin internet", "Rețeaua globală de servere de internet", "Tehnologia de recunoaștere vocală"],
       correctIndex: 1
     },
     {
-      question: "Ce înseamnă acronimul \"HTML\"?",
+      question: "Ce înseamnă acronimul 'HTML'?",
       options: ["Hypertext Markup Language", "High Tech Machine Learning", "Hyperloop Transport Mechanism Logic", "Hierarchical Text Manipulation Logic"],
       correctIndex: 0
     },
@@ -143,7 +218,7 @@ const questions = [
       correctIndex: 2
     },
     {
-      question: "Ce este un \"emoji\"?",
+      question: "Ce este un 'emoji'?",
       options: ["Un limbaj de programare", "Un joc video", "Un tip de virus informatic", "Un simbol grafic folosit în mesaje"],
       correctIndex: 3
     },
@@ -158,7 +233,7 @@ const questions = [
       correctIndex: 1
     },
     {
-      question: "Cine a scris romanul \"Enigma Otiliei\"?",
+      question: "Cine a scris romanul 'Enigma Otiliei'?",
       options: ["Ion Creangă", "Mihai Eminescu", "Ion Luca Caragiale", "George Călinescu"],
       correctIndex: 3
     },
@@ -191,63 +266,15 @@ const questions = [
       question: "Care este cel mai înalt vârf montan din România?",
       options: ["Moldoveanu", "Parângu Mare", "Omu", "Retezat"],
       correctIndex: 0
-    },
-    
-  {
-    question: "Cine a fost liderul Mișcării pentru Drepturile Civile din SUA?",
-    options: ["Malcolm X", "Jesse Jackson", "Martin Luther King Jr.", "Barack Obama"],
-    correctIndex: 2
-  },
-  {
-    question: "Unde a avut loc Revoluția Franceză?",
-    options: ["Londra", "Berlin", "Roma", "Paris"],
-    correctIndex: 3
-  },
-  {
-    question: "Ce companie a fost fondată de Mark Zuckerberg?",
-    options: ["Amazon", "Apple", "Facebook", "Google"],
-    correctIndex: 2
-  },
-  {
-    question: "Cine a fost primul rege al României?",
-    options: ["Carol I", "Ferdinand I", "Mihai I", "Alexandru Ioan Cuza"],
-    correctIndex: 0
-  },
-  {
-    question: "Care este capitala Italiei?",
-    options: ["Madrid", "Paris", "Roma", "Lisabona"],
-    correctIndex: 2
-  },
-  {
-    question: "Cine a scris \"Romeo și Julieta\"?",
-    options: ["William Shakespeare", "Friedrich Nietzsche", "Leo Tolstoy", "Jane Austen"],
-    correctIndex: 0
-  },
-  {
-    question: "Ce este Hadrian's Wall?",
-    options: ["Un muzeu din Londra", "Un râu din Italia", "O cetate în Grecia", "Un zid roman în Marea Britanie"],
-    correctIndex: 3
-  },
-  {
-    question: "Cine a scris \"Odiseea\"?",
-    options: ["Homer", "Plato", "Socrates", "Aristotle"],
-    correctIndex: 0
-  },
-  {
-    question: "În ce an a fost lansat primul website în lume?",
-    options: ["1991", "1993", "1995", "1997"],
-    correctIndex: 1
-  },
-  {
-    question: "Care este capitala Japoniei?",
-    options: ["Tokyo", "Kyoto", "Osaka", "Seoul"],
-    correctIndex: 0
-  }
+    }
   ];
+  
   
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let wrongAnswers = 0;
+
+
 
 function displayQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
@@ -261,6 +288,8 @@ function displayQuestion() {
     optionButton.textContent = currentQuestion.options[i];
     optionButton.addEventListener("click", () => checkAnswer(i));
     answersContainer.appendChild(optionButton);
+    const remainingQuestionsElement = document.getElementById("remainingQuestions");
+  remainingQuestionsElement.textContent = questions.length - currentQuestionIndex;
   }
 }
 

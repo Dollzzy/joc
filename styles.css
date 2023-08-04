@@ -1,6 +1,5 @@
 body {
-  font-family: 'Georgia', serif;
-  margin: 0;
+  font-family: sans-serif;
   padding: 0;
   background-color: #f4ede3;
   display: flex;
@@ -27,6 +26,22 @@ h1 {
   margin-bottom: 20px;
   font-size: 20px;
 }
+
+.question-counter {
+    position: absolute;
+    top: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
 
 .answerButton {
   display: block;
